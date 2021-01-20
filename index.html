@@ -15,13 +15,16 @@
 			"jCNZkLAKQy" : "https://kalavar.cf/documentation/configuration/privacy#mode-none"
 		}
 
-
-		let code = document.location.search.split( "code=" )[1].split( "&" )[0]
-		if ( data.links[code] !== undefined ) {
-			window.location = data.links[code]
-		} else {
-			document.body.style.display = "block";
-		}
+        if ( document.location.search === undefined) {
+	        document.body.style.display = "block";
+        } else {
+            let code = document.location.search.split( "code=" )[1].split( "&" )[0]
+	        if ( data.links[code] !== undefined ) {
+		        window.location = data.links[code]
+	        } else {
+		        document.body.style.display = "block";
+	        }
+        }
 
     </script>
 
