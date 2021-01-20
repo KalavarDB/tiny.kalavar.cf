@@ -119,8 +119,8 @@
 		document.body.style.display = "block";
 	} else {
 		let code = document.location.search.split( "code=" )[1].split( "&" )[0]
-		if ( data.links[code] !== undefined ) {
-			window.location = data.links[code]
+		if ( links[code] !== undefined ) {
+			window.location = links[code]
 		} else {
 			document.body.style.display = "block";
 		}
