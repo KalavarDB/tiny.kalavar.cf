@@ -15,7 +15,7 @@
 			"jCNZkLAKQy" : "https://kalavar.cf/documentation/configuration/privacy#mode-none"
 		}
 
-        if ( document.location.search === undefined) {
+        if ( document.location.search.split( "code=" ).length < 2) {
 	        document.body.style.display = "block";
         } else {
             let code = document.location.search.split( "code=" )[1].split( "&" )[0]
