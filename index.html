@@ -6,28 +6,6 @@
     <title>404 - Code Not Found</title>
     <link rel="shortcut icon" href="https://kalavar.cf/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="//kalavar.cf/assets/css/just-the-docs-default.css">
-
-    <script>
-		const links = {
-			"nUU9A08wmd" : "https://kalavar.cf/documentation/configuration/privacy#mode-detailed",
-			"8OWvSu875O" : "https://kalavar.cf/documentation/configuration/privacy#mode-basic",
-			"hsFKfvHC7Q" : "https://kalavar.cf/documentation/configuration/privacy#mode-minimal",
-			"jCNZkLAKQy" : "https://kalavar.cf/documentation/configuration/privacy#mode-none"
-		}
-
-        if ( document.location.search.split( "code=" ).length < 2) {
-	        document.body.style.display = "block";
-        } else {
-            let code = document.location.search.split( "code=" )[1].split( "&" )[0]
-	        if ( data.links[code] !== undefined ) {
-		        window.location = data.links[code]
-	        } else {
-		        document.body.style.display = "block";
-	        }
-        }
-
-    </script>
-
 </head>
 <body style="display: none">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -129,5 +107,25 @@
         </div>
     </div>
 </div>
+<script>
+	const links = {
+		"nUU9A08wmd" : "https://kalavar.cf/documentation/configuration/privacy#mode-detailed",
+		"8OWvSu875O" : "https://kalavar.cf/documentation/configuration/privacy#mode-basic",
+		"hsFKfvHC7Q" : "https://kalavar.cf/documentation/configuration/privacy#mode-minimal",
+		"jCNZkLAKQy" : "https://kalavar.cf/documentation/configuration/privacy#mode-none"
+	}
+
+	if ( document.location.search.split( "code=" ).length < 2) {
+		document.body.style.display = "block";
+	} else {
+		let code = document.location.search.split( "code=" )[1].split( "&" )[0]
+		if ( data.links[code] !== undefined ) {
+			window.location = data.links[code]
+		} else {
+			document.body.style.display = "block";
+		}
+	}
+
+</script>
 </body>
 </html>
